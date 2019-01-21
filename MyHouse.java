@@ -19,6 +19,20 @@ public class MyHouse
     private Square door;
     private Square window;
     private Square window2;
+    private Tree tree1;
+    private Square sky;
+    private Bird bird1;
+    private Bird bird2;
+    private Bird bird3;
+    private Bird bird4;
+    private Bird bird5;
+    private Bird bird6;
+    private Circle hill4;
+    private Circle hill5;
+    private Tree tree2;
+    private Tree tree3;
+    private Tree tree4;
+    
 
 
     /**
@@ -33,13 +47,27 @@ public class MyHouse
         hill = new Circle();
         hill2 = new Circle();
         hill3 = new Circle();
+        hill4 = new Circle();
+        hill5 = new Circle();
         door = new Square();
         window = new Square();
         window2 = new Square();
+        //tree1 = new Tree(0,0);
+        sky = new Square();
+   
         
         // invoke the method to draw the house
         drawHouse();
-        
+        bird1 = new Bird(200,50);
+        tree1 = new Tree(0,50);
+        bird2 = new Bird(250,50);
+        bird3 = new Bird(300,50);
+        bird4 = new Bird(350,50);
+        bird5 = new Bird(200,-25);
+        bird6 = new Bird(225,-75);
+        tree2 = new Tree(200,60);
+        tree3 = new Tree(450,100);
+        tree4 = new Tree(525,150);
     }
 
     /**
@@ -47,6 +75,13 @@ public class MyHouse
      */
     public void drawHouse()
     {
+        // Draw sky
+        sky.changeColor("blue");
+        sky.changeSize(600);
+        sky.makeVisible();
+        sky.moveVertical(-50);
+        sky.moveHorizontal(-60);
+        
         // Put the sun in position 
         sun.changeColor("yellow");
         sun.moveHorizontal(-50);
@@ -61,22 +96,34 @@ public class MyHouse
         roof.makeVisible();
         
         // Draw hill
-        hill.changeSize(400);
+        hill.changeSize(450);
         hill.moveVertical(125);
         hill.moveHorizontal(-150);
         hill.changeColor("green");
         hill.makeVisible();
         
-        hill2.changeSize(400);
+        hill2.changeSize(450);
         hill2.changeColor("green");
         hill2.moveVertical(125);
         hill2.moveHorizontal(-75);
         hill2.makeVisible();
         
-        hill3.changeSize(400);
+        hill3.changeSize(450);
         hill3.changeColor("green");
         hill3.moveVertical(125);
         hill3.makeVisible();
+        
+        hill4.changeSize(450);
+        hill4.changeColor("green");
+        hill4.makeVisible();
+        hill4.moveVertical(150);
+        hill4.moveHorizontal(100);
+        
+        hill5.changeSize(500);
+        hill5.changeColor("green");
+        hill5.makeVisible();
+        hill5.moveVertical(175);
+        hill5.moveHorizontal(150);
         
         // Draw base
         base.changeColor("red");
@@ -103,6 +150,7 @@ public class MyHouse
         window2.moveVertical(50);
         window2.moveHorizontal(50);
         window2.makeVisible();
+
         
     }
 }

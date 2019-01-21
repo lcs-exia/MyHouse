@@ -43,16 +43,25 @@ public class Tree
         top.changeColor("green");
         top.changeSize(50,100);
         top.makeVisible();
+        // translate horizontally and vertically by x and y
+        top.moveHorizontal(x);
+        top.moveVertical(y);
         
         middle.changeColor("green");
         middle.changeSize(70, 120);
         middle.moveVertical(20);
         middle.makeVisible();
+        // translate horizontally and vertically by x and y
+        middle.moveHorizontal(x);
+        middle.moveVertical(y);
         
         bottom.changeColor("green");
         bottom.changeSize(90, 140);
         bottom.moveVertical(40);
         bottom.makeVisible();
+        // translate horizontally and vertically by x and y
+        bottom.moveHorizontal(x);
+        bottom.moveVertical(y);
         
         // Draw trunk
         trunk.changeColor("brown");
@@ -60,6 +69,9 @@ public class Tree
         trunk.moveVertical(95);
         trunk.moveHorizontal(-30);
         trunk.makeVisible();
+        // translate horizontally and vertically by x and y
+        trunk.moveHorizontal(x);
+        trunk.moveVertical(y);
         
         // translate the tree to the specified location
         
